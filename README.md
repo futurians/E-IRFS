@@ -1,9 +1,6 @@
 # E-IRFS: Exponentially Weighted Instance-Aware Repeat Factor Sampling
 
-📌 Official implementation of our IROS 2025 paper:  
-**Exponentially Weighted Instance-Aware Repeat Factor Sampling for Long-Tailed Object Detection**
-
-This repository introduces **E-IRFS**, a general-purpose sampling method that boosts rare-class performance in long-tailed object detection datasets. It integrates seamlessly with YOLOv11 models from the [Ultralytics](https://github.com/ultralytics/ultralytics) framework.
+📌 This repository introduces **E-IRFS**, a general-purpose sampling method that boosts rare-class performance in long-tailed object detection datasets. It integrates seamlessly with YOLOv11 models from the [Ultralytics](https://github.com/ultralytics/ultralytics) framework.
 
 🧪 Designed for any YOLO dataset — just plug and train!
 
