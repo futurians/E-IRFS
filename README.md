@@ -2,7 +2,7 @@
 
 📌 This repository introduces **E-IRFS**, a general-purpose sampling method that boosts rare-class performance in long-tailed object detection datasets. It integrates seamlessly with YOLOv11 models from the [Ultralytics](https://github.com/ultralytics/ultralytics) framework.
 
-🧪 Designed for any YOLO dataset — just plug and train!
+🧪 Designed for any YOLO dataset — plug and train!
 
 ---
 
@@ -36,8 +36,7 @@ python eirfs_train.py \
   --alpha 2.0 \
   --threshold 0.0001 \
   --epochs 100 \
-  --name eirfs_exp \
-  --device 0
+  --imgsz 640
 ```
 
 ### Arguments
@@ -49,8 +48,7 @@ python eirfs_train.py \
 | `--alpha`    | Exponential scaling factor (default: 2.0)        |
 | `--threshold`| Sampling threshold for rebalancing (default: 0.0001) |
 | `--epochs`   | Number of training epochs                        |
-| `--batch`    | Batch size (default: 16)                         |
-| `--device`   | CUDA device id or `'cpu'`                        |
+| `--imgsz`    | image size (default: 640)                         |
 
 ---
 
