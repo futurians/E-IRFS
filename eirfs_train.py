@@ -60,7 +60,6 @@ class YOLOEIRFSDataset(YOLODataset):
             index = np.random.choice(len(self.labels), p=self.probabilities)
             return self.transforms(self.get_image_and_label(index))
 
-# Patch the dataset
 build.YOLODataset = YOLOEIRFSDataset
 
 # Example usage with configurable input
