@@ -1,3 +1,4 @@
+
 import numpy as np
 from ultralytics.data.dataset import YOLODataset
 import ultralytics.data.build as build
@@ -21,7 +22,17 @@ class YOLOEIRFSDataset(YOLODataset):
         self.instance_counts = np.ones(self.num_classes, dtype=np.float32)
 
         self._count_class_frequencies()
+        self.print_class_stats()  
         self._compute_sampling_weights()
+
+    def print_class_stats(self):
+        print("\n=== E-IRFS Class Statistics ===")
+        for class_id, name in self.data["names"].items():
+            img_count = int(self.image_counts[class_id])
+            inst_count = int(self.instance_counts[class_id])
+            print(f"Class {class_id:2d} ({name:15}): {img_count:5d} images, {inst_count:6d} instances")
+        print("================================\n")
+
 
     def _count_class_frequencies(self):
         """Count how often each class appears across images and instances."""
