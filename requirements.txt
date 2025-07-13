@@ -1,6 +1,10 @@
 # Core dependencies for E-IRFS training
-numpy<2.0
 ultralytics>=8.0.0
 torch>=2.0.0
-matplotlib
+numpy<2.0           # Avoid crashes with matplotlib, pandas, pyarrow
 pandas
+matplotlib
+pyarrow
+scikit-learn
+opencv-python
+tqdm
