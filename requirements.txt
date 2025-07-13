@@ -1,0 +1,4 @@
+# Core dependencies for E-IRFS training
+ultralytics>=8.0.0
+numpy
+matplotlib
