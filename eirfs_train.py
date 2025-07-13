@@ -3,7 +3,7 @@ from ultralytics.data.dataset import YOLODataset
 import ultralytics.data.build as build
 
 # Define a global threshold for E-IRFS
-EIRFS_THRESHOLD = 0.1  # Can be overridden by user
+EIRFS_THRESHOLD = 0.0001  # Can be overridden by user
 
 class YOLOEIRFSDataset(YOLODataset):
     def __init__(self, *args, mode="train", alpha=2.0, t=EIRFS_THRESHOLD, **kwargs):
@@ -72,10 +72,10 @@ if __name__ == "__main__":
     parser.add_argument("--model", type=str, required=True, help="Path to YOLOv11 model")
     parser.add_argument("--data", type=str, required=True, help="Dataset YAML path")
     parser.add_argument("--epochs", type=int, default=3, help="Number of training epochs")
-    parser.add_argument("--imgsz", type=int, default=32, help="Training image size")
-    parser.add_argument("--alphas", type=float, nargs="+", default=[0.5, 1.0, 2.0, 3.0],
+    parser.add_argument("--imgsz", type=int, default=640, help="Training image size")
+    parser.add_argument("--alphas", type=float, nargs="+", default=[2.0],
                         help="List of alpha values to run E-IRFS ablation")
-    parser.add_argument("--threshold", type=float, default=0.1, help="E-IRFS repeat factor threshold")
+    parser.add_argument("--threshold", type=float, default=0.0001, help="E-IRFS repeat factor threshold")
 
     args = parser.parse_args()
 
