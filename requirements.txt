@@ -1,4 +1,6 @@
 # Core dependencies for E-IRFS training
+numpy<2.0
 ultralytics>=8.0.0
-numpy
+torch>=2.0.0
 matplotlib
+pandas
