@@ -15,6 +15,8 @@ E-IRFS enhances standard Instance-Aware Repeat Factor Sampling (IRFS) by using *
 - Improve mean average precision (mAP) for underrepresented objects
 - Benefit lightweight models like YOLOv11-Nano in UAV and real-time scenarios
 
+[**[Paper]**](https://arxiv.org/abs/2503.21893) - Accepted in the 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025).
+
 ---
 
 ## 📦 Installation
