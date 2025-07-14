@@ -1,4 +1,6 @@
 # E-IRFS: Exponentially Weighted Instance-Aware Repeat Factor Sampling
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/downloads/release/python-380/)
 
 📌 This repository introduces **E-IRFS**, a general-purpose sampling method that boosts rare-class performance in long-tailed object detection datasets. It integrates seamlessly with YOLOv11 models from the [Ultralytics](https://github.com/ultralytics/ultralytics) framework.
 
