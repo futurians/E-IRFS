@@ -67,6 +67,119 @@ names: ['ClassA', 'ClassB', 'ClassC', 'ClassD']
 
 You can use E-IRFS with any YOLOv11-compatible dataset.
 
+
+---
+
+## 📊 Benchmark Datasets in EIRFS
+
+To ensure transparency and reproducibility, we provide detailed metadata for every image used in our training and validation phases. You can now explore:
+
+📁 [`train_dataset.csv`](https://github.com/futurians/E-IRFS/blob/main/train_dataset.csv)
+📁 [`validation_dataset.csv`](https://github.com/futurians/E-IRFS/blob/main/validation_dataset.csv)
+
+Each CSV contains:
+
+* Image filename
+* Corresponding YOLO label filename
+* Source dataset name
+* Data split (`train` or `val`)
+* Object class occurrence summary
+
+These files make it easy to track, audit, and reproduce our training pipeline.
+
+---
+
+### 📦 Datasets Used
+
+The following open-source datasets were used in this benchmark. You may download them individually and reconstruct the combined training/validation sets using the provided CSVs.
+
+| Dataset Name              | Description                                                       | Download Link                                                                                             | Citation Key                          |
+| ------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| **FireMan-UAV-RGBT**      | RGB-Thermal drone video dataset for wildfire detection in Finland | [Zenodo](https://zenodo.org/records/13732947)                    | `Kularatne2024FireManPaper`           |
+| **Forest Fire & Smoke**   | Annotated fire/smoke drone images                                 | [Roboflow](https://universe.roboflow.com/master-candidate/forest-fire-and-smoke-rf4pd)                    | `forest-fire-and-smoke-rf4pd_dataset` |
+| **SAUS**                  | Small aerial image dataset with class-labeled objects             | [Roboflow](https://universe.roboflow.com/saus/saus)                                                       | `saus_dataset`                        |
+| **SAR Custom Drone**      | Aerial dataset tailored for UAV-based search and rescue           | [Roboflow](https://universe.roboflow.com/university-of-engineering-and-technology-huotg/sar_custom_drone) | `sar_custom_drone_dataset`            |
+| **Merged Thesis Dataset** | Aggregated UAV object detection dataset used in prior work        | [Roboflow](https://universe.roboflow.com/diplomatic/merged-thesis)                                        | `merged-thesis_dataset`               |
+
+---
+
+### 🧰 How to Use
+
+1. Download each dataset using the links above.
+2. Use the filenames and paths listed in `train_dataset.csv` and `validation_dataset.csv` to:
+
+   * Copy relevant images and labels to your working directory.
+   * Maintain the structure expected by YOLO:
+
+     ```
+     dataset/
+     ├── train/
+     │   ├── images/
+     │   └── labels/
+     └── val/
+         ├── images/
+         └── labels/
+     ```
+3. Update your YOLO `.yaml` config to reflect these locations for training with E-IRFS.
+
+---
+
+### 📚 Citations
+
+```bibtex
+@INPROCEEDINGS{Kularatne2024FireManPaper,
+  author={Kularatne, S.D.M.W. and {\'A}lvarez Casado, Constantino  and Rajala, Janne and Hänninen, Tuomo and Bordallo López, Miguel and Nguyen, Le},
+  booktitle={2024 IEEE 29th International Conference on Emerging Technologies and Factory Automation (ETFA)}, 
+  title={FireMan-UAV-RGBT: A Novel UAV-Based RGB-Thermal Video Dataset for the Detection of Wildfires in the Finnish Forests}, 
+  year={2024},
+  pages={1-8}
+}
+
+@misc{forest-fire-and-smoke-rf4pd_dataset,
+  title = { forest fire and smoke Dataset },
+  type = { Open Source Dataset },
+  howpublished = {\url{https://universe.roboflow.com/master-candidate/forest-fire-and-smoke-rf4pd}},
+  journal = {Roboflow Universe },
+  publisher = {Roboflow },
+  year = {2024 },
+  month = {jan },
+  note = { visited on 2025-02-15 },
+}
+
+@misc{saus_dataset,
+  title = {Saus Dataset},
+  author = {Saus},
+  year = {2024},
+  month = {jun},
+  howpublished = {\url{https://universe.roboflow.com/saus/saus}},
+  journal = {Roboflow Universe},
+  publisher = {Roboflow},
+  note = {Visited on 2025-02-15},
+}
+
+@misc{sar_custom_drone_dataset,
+  title = {SAR Custom DRONE Dataset},
+  author = {University of Engineering and Technology},
+  year = {2023},
+  month = {dec},
+  howpublished = {\url{https://universe.roboflow.com/university-of-engineering-and-technology-huotg/sar_custom_drone}},
+  journal = {Roboflow Universe},
+  publisher = {Roboflow},
+  note = {Visited on 2025-02-15},
+}
+
+@misc{merged-thesis_dataset,
+  title = {Merged Thesis Dataset},
+  author = {Diplomatic},
+  year = {2023},
+  month = {jan},
+  howpublished = {\url{https://universe.roboflow.com/diplomatic/merged-thesis}},
+  journal = {Roboflow Universe},
+  publisher = {Roboflow},
+  note = {Visited on 2025-02-15},
+}
+```
+
 ---
 
 ## 📈 Citation
