@@ -120,7 +120,7 @@ The following open-source datasets were used in this benchmark. You may download
 
 ---
 
-### 📚 Citations
+### 📚 Databases References
 
 ```bibtex
 @INPROCEEDINGS{Kularatne2024FireManPaper,
