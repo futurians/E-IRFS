@@ -79,13 +79,9 @@ To ensure transparency and reproducibility, we provide detailed metadata for eve
 
 Each CSV contains:
 
-* Image filename
-* Corresponding YOLO label filename
-* Source dataset name
-* Data split (`train` or `val`)
-* Object class occurrence summary
+* Image filename and corresponding annotation file name
 
-These files make it easy to track, audit, and reproduce our training pipeline.
+These files enable easy tracking, auditing, and reproduction of our training pipeline.
 
 ---
 
