@@ -183,14 +183,15 @@ The following open-source datasets were used in this benchmark. You may download
 If you use E-IRFS in your work, please cite our IROS 2025 paper:
 
 ```bibtex
-@misc{ahmed2025exponentiallyweightedinstanceawarerepeat,
-      title={Exponentially Weighted Instance-Aware Repeat Factor Sampling for Long-Tailed Object Detection Model Training in Unmanned Aerial Vehicles Surveillance Scenarios}, 
-      author={Taufiq Ahmed and Abhishek Kumar and Constantino Álvarez Casado and Anlan Zhang and Tuomo Hänninen and Lauri Loven and Miguel Bordallo López and Sasu Tarkoma},
-      year={2025},
-      eprint={2503.21893},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.21893}, 
+@INPROCEEDINGS{ahmed2025exponentiallyweightedinstanceawarerepeat,
+  author={Ahmed, Taufiq and Kumar, Abhishek and Casado, Constantino Álvarez and Zhang, Anlan and Hänninen, Tuomo and Loven, Lauri and López, Miguel Bordallo and Tarkoma, Sasu},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Exponentially Weighted Instance-Aware Repeat Factor Sampling for Long-Tailed Object Detection Model Training in Unmanned Aerial Vehicles Surveillance Scenarios}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={11546-11552},
+  doi={10.1109/IROS60139.2025.11246733}
 }
 ```
 
